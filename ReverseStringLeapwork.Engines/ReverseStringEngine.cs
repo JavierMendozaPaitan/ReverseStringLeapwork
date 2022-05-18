@@ -26,12 +26,12 @@ namespace ReverseStringLeapwork.Engines
                 {
                     var reverseResult = string.Empty;
 
-                    if (string.IsNullOrEmpty(text))
+                    if (!string.IsNullOrEmpty(text))
                     {
                         char[] chars = text.ToCharArray();
                         Array.Reverse(chars);
 
-                        reverseResult = chars.ToString();
+                        reverseResult = new string(chars);
                     }
 
                     return reverseResult;

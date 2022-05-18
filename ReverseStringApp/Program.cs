@@ -13,9 +13,9 @@ namespace ReverseStringApp
         {
             using IHost host = CreateHostBuilder(args).Build();
 
-            ReverseAndPrintString(host.Services);
+            //ReverseAndPrintString(host.Services);
 
-            //ReverseAndPrintText(host.Services);
+            ReverseAndPrintText(host.Services);
         }
 
         static void ReverseAndPrintString(IServiceProvider services)

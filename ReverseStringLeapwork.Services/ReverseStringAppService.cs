@@ -28,13 +28,21 @@ namespace ReverseStringLeapwork.Services
         {
             try
             {
-                string inputText = string.Empty;
-                while (inputText != "quit")
+                var isQuit = false;
+                while (!isQuit)
                 {
                     _printStringEngine.PrintString("Enter a text to be reversed: ");
-                    inputText = Console.ReadLine();
+                    var inputText = Console.ReadLine();
+                    if (inputText.Equals("quit"))
+                    {
+                        isQuit = true;
+                        continue;
+                    }
                     _reverseAndPrintStringService.ReverseStringAsync(inputText);
                 }
+
+                Console.WriteLine("Press Enter to finish...");
+                Console.ReadLine();
             }
             catch (Exception ex)
             {
@@ -47,13 +55,21 @@ namespace ReverseStringLeapwork.Services
         {
             try
             {
-                string inputText = string.Empty;
-                while (inputText != "quit")
+                var isQuit = false;
+                while (!isQuit)
                 {
                     _printStringEngine.PrintString("Enter a text to be reversed: ");
-                    inputText = Console.ReadLine();
+                    var inputText = Console.ReadLine();
+                    if (inputText.Equals("quit"))
+                    {
+                        isQuit = true;
+                        continue;
+                    }
                     _reverseAndPrintStringService.ReverseTextAsync(inputText);
                 }
+
+                Console.WriteLine("Press Enter to finish...");
+                Console.ReadLine();
             }
             catch (Exception ex)
             {
